@@ -1,5 +1,6 @@
 ---
 import CardSection from "./components/CardSection.astro";
+import Navigationsbar from "./components/Navigationsbar.astro";
 import "./styles/style.css";
 ---
 
@@ -12,8 +13,8 @@ import "./styles/style.css";
     <title>Creative Escape</title>
   </head>
   <body>
-    <header>
-
+    <header class="navigationsbar">
+      <Navigationsbar/>
     </header>
 
     <main>
@@ -22,7 +23,7 @@ import "./styles/style.css";
         <img src="../imgs/logo.png" alt="" class="logo">
       </section>
 
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum nobis itaque, mollitia dicta deserunt nulla laboriosam enim magnam laudantium quo, quod possimus accusantium iste. Provident dolorum nobis cupiditate facilis minus.</p>
+      <p class="velkomsttekst">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum nobis itaque, mollitia dicta deserunt nulla laboriosam enim magnam laudantium quo, quod possimus accusantium iste. Provident dolorum nobis cupiditate facilis minus.</p>
 
       <CardSection variant="featured" overskrift="Begivenheder i København" />
       <CardSection overskrift="Begivenheder i Berlin" />
