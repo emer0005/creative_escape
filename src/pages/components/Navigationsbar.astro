@@ -1,15 +1,23 @@
 ---
-import Burgermenu from "./Burgermenu.astro"
+import Burgermenu from "./Burgermenu.astro";
 ---
+
 <section>
-    <img src="../imgs/søge.png" alt="">
-    <img src="../imgs/like.png" alt="">
-    <burgermenu/>
+  <img src="../imgs/søge.png" alt="" />
+  <img src="../imgs/like.png" alt="" />
+  <burgermenu></burgermenu>
 </section>
 
 <style>
-    img {
-        width: 30%;
-        margin-right: 10px;
-    }
+  img {
+    width: 30%;
+    margin-right: 10px;
+  }
+
+  section {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    z-index: 2;
+  }
 </style>
