@@ -3,14 +3,16 @@ import Burgermenu from "./Burgermenu.astro";
 ---
 
 <section>
-  <img src="../imgs/søge.png" alt="" />
-  <img src="../imgs/like.png" alt="" />
-  <burgermenu></burgermenu>
+  <div class="flex">
+    <img src="../imgs/søge.png" alt="" />
+    <img src="../imgs/like.png" alt="" />
+    <Burgermenu />
+  </div>
 </section>
 
 <style>
   img {
-    width: 30%;
+    width: 25%;
     margin-right: 10px;
   }
 
@@ -19,5 +21,10 @@ import Burgermenu from "./Burgermenu.astro";
     top: 25px;
     right: 25px;
     z-index: 2;
+  }
+
+  .flex {
+    display: flex;
+    gap: 20px;
   }
 </style>

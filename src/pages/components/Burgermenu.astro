@@ -1,0 +1,112 @@
+<nav>
+  <ul class="menu">
+    <li><a href="/">Home</a></li>
+    <li><a href="/about">About Us</a></li>
+    <li><a href="/contact">Contact Us</a></li>
+  </ul>
+  <div class="burger">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+</nav>
+
+<style>
+  .menu {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+    position: relative; /* gør det muligt at bruge z-index */
+    z-index: 10;
+  }
+
+  .menu li {
+    list-style: none;
+  }
+
+  .menu a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+    text-align: start;
+  }
+
+  .menu a:hover {
+    color: #ff0000;
+  }
+
+  .burger {
+    margin-top: 1.2rem;
+    width: 50px;
+    height: 30px;
+    cursor: pointer;
+  }
+
+  .burger .line {
+    width: 100%;
+    height: 5px;
+    background-color: black;
+    margin-bottom: 10px;
+    transition: 0.2s linear;
+  }
+
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(9.5px, 9.5px);
+    transition: 0.2s linear;
+    background-color: white;
+    height: 2px;
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(9.5px, -9.5px);
+    transition: 0.2s linear;
+    background-color: white;
+    height: 2px;
+  }
+
+  nav.active .menu {
+    display: block;
+    background-color: #423b36;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 130%;
+    height: 45rem;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+
+  nav.active .menu li {
+    margin: 10px 20px;
+  }
+
+  nav.active .menu a {
+    font-size: 24px;
+  }
+</style>
+
+<script is:inline>
+  const burger = document.querySelector(".burger");
+  const nav = document.querySelector("nav");
+  const menu = document.querySelector(".menu");
+
+  burger.addEventListener("click", burgerClick);
+  function burgerClick() {
+    burger.classList.toggle("active");
+    nav.classList.toggle("active");
+  }
+  menu.addEventListener("click", menuClick);
+  function menuClick() {
+    burger.classList.remove("active");
+    nav.classList.remove("active");
+  }
+</script>
