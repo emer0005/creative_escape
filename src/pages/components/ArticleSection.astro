@@ -1,0 +1,23 @@
+---
+const { Article_h2, Article_brødtekst, Article_img } = Astro.props;
+---
+
+<h2>{Article_h2}</h2>
+<p>{Article_brødtekst}</p>
+<img src={Article_img} alt="" />
+
+<style>
+  h2,
+  p {
+    margin: 0 auto;
+    max-width: 1000px;
+    margin-bottom: 2rem;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: 1200px;
+    margin-bottom: 2rem;
+  }
+</style>
