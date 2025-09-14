@@ -6,28 +6,33 @@ const { overskrift, variant } = Astro.props;
 <section class={`cardsection ${variant}`}>
   <h2>{overskrift}</h2>
   <div class="grid_1-1-1-1">
-    <Card img="../imgs/eksempel.png" titel="titel" text="lorem lorem lorem lorem" />
-    <Card img="../imgs/eksempel.png" titel="titel" text="lorem lorem lorem lorem" />
-    <Card img="../imgs/eksempel.png" titel="titel" text="lorem lorem lorem lorem" />
-    <Card img="../imgs/eksempel.png" titel="titel" text="lorem lorem lorem lorem" />
-    <Card img="../imgs/eksempel.png" titel="titel" text="lorem lorem lorem lorem" />
-    <Card img="../imgs/eksempel.png" titel="titel" text="lorem lorem lorem lorem" />
-    <Card img="../imgs/eksempel.png" titel="titel" text="lorem lorem lorem lorem" />
-    <Card img="../imgs/eksempel.png" titel="titel" text="lorem lorem lorem lorem" />
+    <Card img="../imgs/forsidebillede.png" titel="titel" text="lorem lorem lorem lorem" />
+    <Card img="../imgs/forsidebillede.png" titel="titel" text="lorem lorem lorem lorem" />
+    <Card img="../imgs/forsidebillede.png" titel="titel" text="lorem lorem lorem lorem" />
+    <Card img="../imgs/forsidebillede.png" titel="titel" text="lorem lorem lorem lorem" />
+    <Card img="../imgs/forsidebillede.png" titel="titel" text="lorem lorem lorem lorem" />
+    <Card img="../imgs/forsidebillede.png" titel="titel" text="lorem lorem lorem lorem" />
+    <Card img="../imgs/forsidebillede.png" titel="titel" text="lorem lorem lorem lorem" />
+    <Card img="../imgs/forsidebillede.png" titel="titel" text="lorem lorem lorem lorem" />
   </div>
 </section>
 
 <style>
-  .grid_1-1-1-1 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    align-items: center;
-    justify-items: center;
+  @media (min-width: 900px) {
+    .grid_1-1-1-1 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      align-items: center;
+      justify-items: center;
+    }
   }
 
   .cardsection {
-    padding: 3.5rem 0;
+    padding: 3.5rem 1.2rem;
     margin-bottom: 4rem;
+    align-items: center;
+    justify-items: center;
   }
 
   h2 {
@@ -41,6 +46,6 @@ const { overskrift, variant } = Astro.props;
   }
 
   .featured {
-    background: #af9f91;
+    background: #d9d9d9;
   }
 </style>
