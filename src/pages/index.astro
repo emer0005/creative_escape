@@ -1,38 +1,13 @@
 ---
 import CardSection from "./components/CardSection.astro";
-import Navigationsbar from "./components/Navigationsbar.astro";
-import Footer from "./components/Footer.astro";
+import PageLayout from "./layouts/PageLayout.astro";
+import Hero from "./components/Hero.astro";
 import "./styles/style.css";
 ---
 
-<html lang="da">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Creative Escape</title>
-  </head>
-  <body>
-    <header class="navigationsbar">
-      <Navigationsbar/>
-    </header>
-
-    <main>
-      <section class="hero">
-        <img src="../imgs/forsidebillede.png" alt="" class="billede">
-        <img src="../imgs/logo.png" alt="" class="logo">
-      </section>
-
-      <p class="velkomsttekst">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum nobis itaque, mollitia dicta deserunt nulla laboriosam enim magnam laudantium quo, quod possimus accusantium iste. Provident dolorum nobis cupiditate facilis minus.</p>
-
-      <CardSection variant="featured" overskrift="Begivenheder i København" />
-      <CardSection overskrift="Begivenheder i Berlin" />
-  </main>
-  <footer>
-    <Footer/>
-  </footer>
-
-
-  </body>
-</html>
+<PageLayout>
+  <Hero />
+  <p class="velkomsttekst">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum nobis itaque, mollitia dicta deserunt nulla laboriosam enim magnam laudantium quo, quod possimus accusantium iste. Provident dolorum nobis cupiditate facilis minus.</p>
+  <CardSection variant="featured" overskrift="Begivenheder i København" />
+  <CardSection overskrift="Begivenheder i Berlin" />
+</PageLayout>
