@@ -1,30 +1,46 @@
 ---
 import Card from "./Card.astro";
 import Button from "./Button.astro";
-const { overskrift, variant } = Astro.props;
+const { overskrift, variant, img_1, img_2, img_3, img_4, img_5, img_6, img_7, img_8, titel_1, titel_2, titel_3, titel_4, titel_5, titel_6, titel_7, titel_8, text_1, text_2, text_3, text_4, text_5, text_6, text_7, text_8 } = Astro.props;
 ---
 
 <section class={`cardsection ${variant}`}>
   <h2>{overskrift}</h2>
-  <div class="grid_1-1-1-1">
-    <Card link="./article" img="../imgs/forsidebillede.png" titel="titel" text="lorem lorem lorem lorem" />
-    <Card link="#" img="../imgs/forsidebillede.png" titel="titel" text="lorem lorem lorem lorem" />
-    <Card link="#" img="../imgs/forsidebillede.png" titel="titel" text="lorem lorem lorem lorem" />
-    <Card link="#" img="../imgs/forsidebillede.png" titel="titel" text="lorem lorem lorem lorem" />
-    <Card link="#" img="../imgs/forsidebillede.png" titel="titel" text="lorem lorem lorem lorem" />
-    <Card link="#" img="../imgs/forsidebillede.png" titel="titel" text="lorem lorem lorem lorem" />
-    <Card link="#" img="../imgs/forsidebillede.png" titel="titel" text="lorem lorem lorem lorem" />
-    <Card link="#" img="../imgs/forsidebillede.png" titel="titel" text="lorem lorem lorem lorem" />
+  <div class="grid_1-1 grid_1-1-1 grid_7-1">
+    <Card link="./article" img={img_1} titel={titel_1} text={text_1} />
+    <Card link="#" img={img_2} titel={titel_2} text={text_2} />
+    <Card link="#" img={img_3} titel={titel_3} text={text_3} />
+    <Card link="#" img={img_4} titel={titel_4} text={text_4} />
+    <Card link="#" img={img_5} titel={titel_5} text={text_5} />
+    <Card link="#" img={img_6} titel={titel_6} text={text_6} />
+    <Card link="#" img={img_7} titel={titel_7} text={text_7} />
+    <Card link="#" img={img_8} titel={titel_8} text={text_8} />
   </div>
   <Button />
 </section>
 
 <style>
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+
   @media (min-width: 900px) {
-    .grid_1-1-1-1 {
+    .grid_1-1-1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 50px;
+      justify-items: center;
+      justify-content: center;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    .grid_7-1 {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 30px;
+      gap: 50px;
       align-items: center;
       justify-items: center;
     }
@@ -32,19 +48,20 @@ const { overskrift, variant } = Astro.props;
 
   .cardsection {
     padding: 3.5rem 1.2rem;
-    margin-bottom: 4rem;
+    margin-bottom: 10rem;
     align-items: center;
     justify-items: center;
   }
 
   h2 {
+    color: #423b36;
     text-align: center;
     font-size: 3rem;
     padding-bottom: 3.5rem;
   }
 
   .featured h2 {
-    color: #00ff15;
+    color: #423b36;
   }
 
   .featured {
