@@ -2,9 +2,11 @@
 const { Article_h2, Article_brødtekst, Article_img } = Astro.props;
 ---
 
-<h2>{Article_h2}</h2>
-<p>{Article_brødtekst}</p>
-<img src={Article_img} alt="" />
+<div class="article_section">
+  <h2>{Article_h2}</h2>
+  <p>{Article_brødtekst}</p>
+  <img src={Article_img} alt="" />
+</div>
 
 <style>
   h2,
@@ -12,12 +14,28 @@ const { Article_h2, Article_brødtekst, Article_img } = Astro.props;
     margin: 0 auto;
     max-width: 1000px;
     margin-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   img {
     display: block;
     margin: 0 auto;
     max-width: 1200px;
-    margin-bottom: 2rem;
+    width: 100%;
+    height: auto;
+    margin-bottom: 6rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin-bottom: 6rem;
+  }
+
+  h2 {
+    font-size: 2rem;
   }
 </style>
