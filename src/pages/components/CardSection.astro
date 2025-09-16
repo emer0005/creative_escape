@@ -1,5 +1,6 @@
 ---
 import Card from "./Card.astro";
+import Button from "./Button.astro";
 const { overskrift, variant } = Astro.props;
 ---
 
@@ -15,6 +16,7 @@ const { overskrift, variant } = Astro.props;
     <Card link="#" img="../imgs/forsidebillede.png" titel="titel" text="lorem lorem lorem lorem" />
     <Card link="#" img="../imgs/forsidebillede.png" titel="titel" text="lorem lorem lorem lorem" />
   </div>
+  <Button />
 </section>
 
 <style>
