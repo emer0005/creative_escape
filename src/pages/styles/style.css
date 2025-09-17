@@ -17,3 +17,29 @@
 .last_article_section {
   margin-bottom: 8rem;
 }
+
+/************ fonte *************/
+
+.instrument-sans {
+  font-family: "Instrument Sans", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.aleo {
+  font-family: "Aleo", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+/********************************/
+
+h2,
+h3 {
+  font-family: "Instrument Sans", sans-serif;
+}
+
+p {
+  font-family: "Aleo", serif;
+}
