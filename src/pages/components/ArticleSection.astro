@@ -24,18 +24,18 @@ const { Article_h2, Article_brødtekst, Article_img } = Astro.props;
     max-width: 1200px;
     width: 100%;
     height: auto;
-    margin-bottom: 6rem;
+    margin-bottom: 3rem;
     padding-left: 2rem;
     padding-right: 2rem;
   }
 
   p {
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
     line-height: 1.5;
-    margin-bottom: 6rem;
+    margin-bottom: 3rem;
   }
 
   h2 {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 3vw, 2rem);
   }
 </style>
