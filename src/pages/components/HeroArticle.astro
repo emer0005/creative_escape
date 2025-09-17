@@ -10,25 +10,30 @@ const { ArticleOverkskrift, brødtekst, Hero_img } = Astro.props;
 
 <style>
   h1 {
-    font-size: 4rem;
+    font-size: clamp(2rem, 4vw, 3.5rem);
     text-align: center;
     margin: 0 auto;
     max-width: 1000px;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
   }
 
   p {
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
     text-align: center;
     max-width: 1000px;
     margin: 0 auto;
     margin-bottom: 2rem;
-    line-height: 1.3;
+    line-height: 1.4;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
   }
 
   img {
     width: 100%;
-    height: 1000px;
+    height: auto;
+    max-height: 1000px;
     object-fit: cover;
     margin-bottom: 4rem;
   }
