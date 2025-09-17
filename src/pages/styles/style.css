@@ -5,11 +5,11 @@
 }
 
 .velkomsttekst {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 2vw, 2rem);
   text-align: center;
   justify-items: center;
   max-width: 1200px;
-  margin: 13rem auto;
+  margin: clamp(5rem, 10vw, 13rem) auto;
   padding-left: 4rem;
   padding-right: 4rem;
   line-height: 1.8;
